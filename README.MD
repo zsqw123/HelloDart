@@ -54,7 +54,18 @@ oo.p(); // 编译通过 运行出错, 因为Object没这方法
 
 #### setter/getter
 
+```dart
+class Person {
+  String _name; // 下划线开头变量表示私有权限，外部文件无法访问
+  final int _age;// 相当于 kotlin:val 只有 getter 访问器
+  Person(this._name, this._age);
 
+  //使用set关键字 自定义setter访问器
+  set name(String name) => _name = name;
+  //使用get关键字 自定义getter访问器
+  bool get isAdult => _age > 18;
+}
+```
 
 ### 基础类型数组
 
@@ -115,7 +126,7 @@ s$s
 
 ### 嵌套函数
 
-`Dart`允许嵌套函数, 这一点与`Kotlin`一致：
+`Dart`允许嵌套函数, 这一点与`Kotlin`一致, 但`Kotlin`还能嵌套类, `Dart`则不能：
 
 ```dart
 main(List<String> args) {
