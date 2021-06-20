@@ -1,3 +1,7 @@
+class Hehe {
+  p() => 'hehe';
+}
+
 main(List<String> args) {
   int a = 1;
   bool b = false;
@@ -15,6 +19,14 @@ main(List<String> args) {
   print(g);
 
   print("-----1-----");
+
+  Object o = Object();
+  o = 1;
+  print(o);
+  o = Hehe();
+  print(o is Hehe);
+  print((o as Hehe).p());
+  print('-----2-----');
 
   List<int> aa = [1, 2, 3];
   List bb = [1, 2, false];
