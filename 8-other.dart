@@ -1,5 +1,3 @@
-import 'dart:html';
-
 typedef AnimalFunc(Animal animal);
 main(List<String> args) {
   var strings = <String>[];
