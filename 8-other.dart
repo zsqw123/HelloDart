@@ -13,6 +13,12 @@ main(List<String> args) {
   print(fun.testAnimal is AnimalFunc);
   print(fun.testCat is AnimalFunc);
   print(fun.testDog is AnimalFunc);
+
+  Object o = [1, 2, 3, 4];
+  o as List;
+  // o as Map;
+
+  try {} on NoSuchMethodError catch (e) {} finally {}
 }
 
 class TestFun {
